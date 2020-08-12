@@ -1,7 +1,7 @@
 TOP_DIR		= .
 
 #LCFLAGS += -I$(TOP_DIR)/base
-#LCFLAGS += -I$(TOP_DIR)/inc
+LCFLAGS += -I$(TOP_DIR)/inc
 #LCFLAGS += -I$(TOP_DIR)/core
 #LCFLAGS += -I$(TOP_DIR)/runtime
 #LCFLAGS += -I$(TOP_DIR)/tools
@@ -11,6 +11,6 @@ TOP_DIR		= .
 #LCFLAGS += -lpthread
 
 SUBDIRS		=\
-		src \
+		src
 
 include $(TOP_DIR)/mk/target.mk

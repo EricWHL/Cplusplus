@@ -1,4 +1,4 @@
-WARNING = -W -Wall -Wstrict-prototypes -Wmissing-prototypes
+WARNING = -W -Wall
 CC = g++
 
 CFLAGS  = -g -O2 $(WARNING) $(LCFLAGS)
@@ -11,7 +11,7 @@ OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 os:$(OBJS)
 	$(CC) -g $(OBJS) -o $@ $(CFLAGS)
 
-%.o:%.c
+%.o:%.cpp
 	$(CC) -c -g $< -o $@ $(CFLAGS)
 
 clean:
