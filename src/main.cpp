@@ -2,8 +2,13 @@
 #include <string>
 
 #include "com.h"
-#include "Sales_data.h"
 #include "NLog.h"
+
+/*
+ *   Study content  *
+ */
+#include "Sales_data.h"
+#include "Screen.h"
 
 using namespace std;
 
@@ -28,6 +33,11 @@ int main ()
 
     cout << total.isbn() << endl;
     Sales_data trans;
+
+
+    Screen myscr;
+    char ch = myscr.get();
+    
     cout<<"Main Function OUT"<<endl;
     return 0;
 }
