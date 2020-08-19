@@ -1,5 +1,5 @@
 WARNING = -W -Wall
-CC = g++
+CC = g++ -std=c++11
 
 CFLAGS  = -g -O2 $(WARNING) $(LCFLAGS)
 
