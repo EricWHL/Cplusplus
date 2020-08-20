@@ -35,9 +35,21 @@ int main ()
     Sales_data trans;
 
 
-    Screen myscr;
+    Screen myscr(5,3,'A');
+    cout<<"----------------"<<endl;
     char ch = myscr.get();
-    
+    ch = myscr.get(0,0);
+    myscr.move(4,0).set('#');
+    cout<<"----------------"<<endl;
+    myscr.display(cout).set('*');
+    cout<<"----------------"<<endl;
+    myscr.move(4,0).set('#');
+    cout<<"----------------"<<endl;
+    Screen tmp = myscr.move(4,0);
+    tmp.set('#');
+    cout<<"----------------"<<endl;
+    myscr.set('#').display(cout);
+    cout<<"----------------"<<endl;
     cout<<"Main Function OUT"<<endl;
     return 0;
 }
