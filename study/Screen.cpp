@@ -29,3 +29,13 @@ Screen& Screen::set(pos r, pos col, char ch)
     contents[r*width + col] = ch;
     return *this;
 }
+
+Screen::pos Screen::size() const
+{
+    return height * width;
+}
+
+void Screen::setHeight(pos var)
+{
+    height = var;
+}

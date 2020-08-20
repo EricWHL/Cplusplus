@@ -3,8 +3,11 @@
 
 #include <string>
 
+
 class Screen {
 
+    friend class Window_Manager;
+    friend std::ostream& storeOn(std::ostream&, Screen&);
 public:
     void some_member() const;
     
@@ -30,6 +33,10 @@ public:
     const Screen& display(std::ostream &os) const
         { do_display(os);return *this; }
 
+    pos size() const;
+
+    void setHeight(pos);
+
     
 private:
     pos cursor = 0;
@@ -41,4 +48,8 @@ private:
     void do_display(std::ostream &os) const
         {os << contents;}
 };
+
+extern std::ostream& storeOn(std::ostream&, Screen&);
+//extern BitMap& storeOn(BitMap&, Screen&);
+
 #endif
