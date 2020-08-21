@@ -19,6 +19,11 @@ public:
         bookNo(s), units_sold(n), revenue(p*n) {}
     
     Sales_data(std::istream&);
+
+    Sales_data(): Sales_data("", 0, 0) {}
+    Sales_data(std::string s): Sales_data(s, 0, 0) {}
+
+
     
     std::string isbn() const {return bookNo;}
     Sales_data& combine(const Sales_data&);
