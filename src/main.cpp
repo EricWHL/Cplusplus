@@ -7,8 +7,8 @@
 /*
  *   Study content  *
  */
-#include "Sales_data.h"
-#include "Screen.h"
+
+#include "Study.h"
 
 using namespace std;
 
@@ -50,6 +50,20 @@ int main ()
     cout<<"----------------"<<endl;
     myscr.set('#').display(cout);
     cout<<"----------------"<<endl;
+    
+    constexpr Debug io_sub(false, true, false);
+    if(io_sub.any())
+        cerr << "print appropriate error messages" << endl;
+
+    constexpr Debug prod(false);
+    if(prod.any())
+        cerr << "print an error messager" << endl;
+
+
+
+
+
+
     cout<<"Main Function OUT"<<endl;
     return 0;
 }
