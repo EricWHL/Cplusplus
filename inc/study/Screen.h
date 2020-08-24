@@ -37,6 +37,9 @@ public:
 
     void setHeight(pos);
 
+
+    Screen& clear(char = bkground);
+
     
 private:
     pos cursor = 0;
@@ -47,6 +50,7 @@ private:
     mutable size_t access_ctr;
     void do_display(std::ostream &os) const
         {os << contents;}
+    static const char bkground;
 };
 
 extern std::ostream& storeOn(std::ostream&, Screen&);

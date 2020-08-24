@@ -12,6 +12,8 @@ public:
 private:
     std::string owner;
     double amount;
+    static constexpr int period = 30;
+    double daily_tbl[period];
     static double interestRate;
     static double initRate();
 };

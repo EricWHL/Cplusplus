@@ -59,8 +59,12 @@ int main ()
     if(prod.any())
         cerr << "print an error messager" << endl;
 
-
-
+    double r;
+    r = Account::rate();
+    Account ac1;
+    Account *ac2 = & ac1;
+    r = ac1.rate();
+    r = ac2->rate();
 
 
 
