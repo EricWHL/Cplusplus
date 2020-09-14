@@ -6,6 +6,7 @@ LCFLAGS += -I$(TOP_DIR)/inc/base
 LCFLAGS += -I$(TOP_DIR)/inc/utils
 LCFLAGS += -I$(TOP_DIR)/inc/study
 LCFLAGS += -I$(TOP_DIR)/inc/com
+LCFLAGS += -I$(TOP_DIR)/test/com
 #LCFLAGS += -I$(TOP_DIR)/core
 #LCFLAGS += -I$(TOP_DIR)/runtime
 #LCFLAGS += -I$(TOP_DIR)/tools
@@ -19,5 +20,8 @@ SUBDIRS		=\
 		base \
 		utils \
 		study \
+		test \
+		test/com \
+
 
 include $(TOP_DIR)/mk/target.mk

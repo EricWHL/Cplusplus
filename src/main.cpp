@@ -3,7 +3,7 @@
 
 #include "com.h"
 #include "NLog.h"
-
+#include "Com_Test.h"
 /*
  *   Study content  *
  */
@@ -67,7 +67,7 @@ int main ()
     r = ac2->rate();
 
 
-
+    Com_Test_Main();
     cout<<"Main Function OUT"<<endl;
     return 0;
 }

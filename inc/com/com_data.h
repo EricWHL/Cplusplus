@@ -8,7 +8,8 @@
 #define INT16        short
 #define UINT32       unsigned int
 #define INT32        int
-
+#define UINT64       unsigned long
+#define INT64        long
 
 
 #define VOID         void
