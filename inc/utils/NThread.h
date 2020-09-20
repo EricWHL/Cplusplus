@@ -20,13 +20,16 @@ class NThread {
     NThread();
     virtual ~NThread();
 
-    virtual STATUS Run(const UBYTE* name,
-                         INT32 priority = NTHREAD_PRIORITY_DEFAULT,
-                         INT32 stack = 0);
+    virtual STATUS    run(const UBYTE* name,
+                          INT32 priority = NTHREAD_PRIORITY_DEFAULT,
+                          INT32 stack = 0);
 
-    virtual void        requestExit();
+    virtual VOID      requestExit();
+    virtual STATUS    readyToRun();
+    STATUS            requestExitAndWait();
 
-    
+    STATUS            join();
+    BOOL              isRunning() const;    
 };
 
 
