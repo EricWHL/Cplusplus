@@ -15,6 +15,8 @@ typedef long             INT64;
 typedef void             VOID;
 typedef void*            POINTER;
 
+typedef INT64            NSECS;
+
 
 
 #endif
